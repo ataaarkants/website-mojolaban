@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Kecamatan Mojolaban - Kabupaten Sukoharjo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #174785;
+            --primary-dark: #0f2e56;
+            --primary-light: #205ca8;
+            --accent: #d97706;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --bg-light: #f8fafc;
+            --card-border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(15,46,86,0.08);
+            --shadow-lg: 0 10px 25px rgba(15,46,86,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- Topbar --- */
+        .topbar {
+            background-color: var(--primary-dark);
+            color: #e2e8f0;
+            padding: 8px 0;
+            font-size: 0.82rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .container {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topbar-left {
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .topbar-right span {
+            color: #cbd5e1;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 0;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .brand-title {
+            line-height: 1.25;
+        }
+
+        .brand-title h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-title p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #334155;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: color 0.2s;
+            padding: 6px 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        nav a.active::after,
+        nav a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .btn-nav-portal {
+            background-color: var(--primary);
+            color: #ffffff !important;
+            padding: 8px 18px !important;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-nav-portal:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-nav-portal::after {
+            display: none !important;
+        }
+
+        /* --- Hero Slider / Banner --- */
+        .hero {
+            background: linear-gradient(rgba(15, 46, 86, 0.82), rgba(15, 46, 86, 0.88)), url('assets/hero-mojolaban.jpg') center/cover no-repeat;
+            color: #ffffff;
+            padding: 90px 0 80px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #f1f5f9;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(2rem, 3.5vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.25;
+            color: #ffffff;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            max-width: 820px;
+            margin: 0 auto 32px auto;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-hero-primary {
+            background-color: #ffffff;
+            color: var(--primary);
+        }
+
+        .btn-hero-primary:hover {
+            background-color: #f1f5f9;
+            transform: translateY(-2px);
+        }
+
+        .btn-hero-outline {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+
+        .btn-hero-outline:hover {
+            border-color: #ffffff;
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* --- Section Header --- */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header .section-subtitle {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .section-header .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+
+        .section-header .section-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 10px auto 0 auto;
+        }
+
+        /* --- Bagian Jaringan Desa --- */
+        .village-section {
+            padding: 70px 0;
+            background-color: #ffffff;
+        }
+
+        .village-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .village-card {
+            background-color: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 34px 28px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .village-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+
+        .village-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 16px;
+        }
+
+        .village-code {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+            background-color: rgba(23, 71, 133, 0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.05rem;
+            flex-shrink: 0;
+        }
+
+        .village-meta h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .village-meta span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .village-card p {
+            color: #475569;
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+
+        .village-card-footer {
+            margin-top: auto;
+        }
+
+        .btn-visit {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .btn-visit:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* --- Section Profil Kecamatan --- */
+        .profile-section {
+            padding: 70px 0;
+            background-color: var(--bg-light);
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .profile-card h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 700;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .profile-card p, .profile-card li {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        .profile-card ul {
+            padding-left: 20px;
+        }
+
+        /* --- Section Berita Kecamatan --- */
+        .news-section {
+            padding: 70px 0;
+            background-color: #ffffff;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .news-card {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .news-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #e2e8f0;
+        }
+
+        .news-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .news-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .news-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .news-desc {
+            font-size: 0.88rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary-dark);
+            color: #cbd5e1;
+            padding: 55px 0 25px 0;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 860px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .footer-col h4 {
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-col p {
+            font-size: 0.88rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 8px;
+            font-size: 0.88rem;
+        }
+
+        .footer-col a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hero {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bilah Atas -->
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <span>Situs Resmi Pemerintah Kecamatan Mojolaban - Kabupaten Sukoharjo</span>
+                </div>
+                <div class="topbar-right">
+                    <span>Telp/Fax: (0271) 611767</span>
+                    <span>Email: kecamatanmojolaban@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="brand-link">
+                    <img src="assets/logo-mojolaban.png" alt="Logo PPID Mojolaban" class="brand-logo" onerror="this.src='assets/logo-sukoharjo.png'">
+                    <div class="brand-title">
+                        <h1>Kecamatan Mojolaban</h1>
+                        <p>Kabupaten Sukoharjo - Jawa Tengah</p>
+                    </div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active">Beranda</a></li>
+                        <li><a href="#desa">Jaringan Desa</a></li>
+                        <li><a href="#profil">Profil Wilayah</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                        <li><a href="#desa" class="btn-nav-portal">Pilih Desa</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Utama -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-tag">Portal Layanan Terpadu</span>
+            <h2>Pemerintah Kecamatan Mojolaban</h2>
+            <p>Gerbang integrasi informasi dan pelayanan publik digital tingkat kecamatan menuju desa-desa di bawah naungan Kecamatan Mojolaban, Kabupaten Sukoharjo.</p>
+            <div class="hero-actions">
+                <a href="#desa" class="btn-hero btn-hero-primary">Akses Website Desa</a>
+                <a href="#profil" class="btn-hero btn-hero-outline">Profil Kecamatan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilihan Website Desa -->
+    <section id="desa" class="village-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Jaringan Desa Terpadu</span>
+                <h2 class="section-title">Akses Website Desa Mandiri</h2>
+                <p class="section-desc">Pilih website mandiri desa untuk mendapatkan layanan administrasi kependudukan, transparansi anggaran, potensi lokal, dan informasi publik.</p>
+            </div>
+
+            <div class="village-grid">
+                <!-- Desa Palur -->
+                <div class="village-card">
+                    <div class="village-card-header">
+                        <div class="village-code">01</div>
+                        <div class="village-meta">
+                            <h3>Desa Palur</h3>
+                            <span>Kecamatan Mojolaban</span>
+                        </div>
+                    </div>
+                    <p>Akses website mandiri Desa Palur untuk melihat profil desa, layanan administrasi kependudukan, lembaga kemasyarakatan, transparansi dokumen APBDes, dan berita kegiatan desa.</p>
+                    <div class="village-card-footer">
+                        <a href="desa/palur/index.html" class="btn-visit">Masuk ke Website Palur</a>
+                    </div>
+                </div>
+
+                <!-- Desa Plumbon -->
+                <div class="village-card">
+                    <div class="village-card-header">
+                        <div class="village-code">02</div>
+                        <div class="village-meta">
+                            <h3>Desa Plumbon</h3>
+                            <span>Kecamatan Mojolaban</span>
+                        </div>
+                    </div>
+                    <p>Akses website mandiri Desa Plumbon untuk melihat informasi sejarah desa, visi misi, jajaran perangkat desa, layanan publik, transparansi keuangan, serta galeri kegiatan masyarakat.</p>
+                    <div class="village-card-footer">
+                        <a href="desa/plumbon/index.html" class="btn-visit">Masuk ke Website Plumbon</a>
+                    </div>
+                </div>
+
+                <!-- Desa Gadingan -->
+                <div class="village-card">
+                    <div class="village-card-header">
+                        <div class="village-code">03</div>
+                        <div class="village-meta">
+                            <h3>Desa Gadingan</h3>
+                            <span>Kecamatan Mojolaban</span>
+                        </div>
+                    </div>
+                    <p>Akses website mandiri Desa Gadingan untuk melihat profil sentra industri lokal, direktori Rumah UMKM, suara warga, data sektoral, serta keterbukaan informasi publik desa.</p>
+                    <div class="village-card-footer">
+                        <a href="desa/gadingan/index.html" class="btn-visit">Masuk ke Website Gadingan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Singkat Kecamatan -->
+    <section id="profil" class="profile-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Pemerintahan Wilayah</span>
+                <h2 class="section-title">Sekilas Kecamatan Mojolaban</h2>
+                <p class="section-desc">Kecamatan Mojolaban merupakan salah satu kecamatan di Kabupaten Sukoharjo yang berbatasan langsung dengan Kota Surakarta dan Kabupaten Karanganyar.</p>
+            </div>
+
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <h4>Wilayah Administrasi</h4>
+                    <p>Kecamatan Mojolaban membawahi 15 Desa/Kelurahan dengan pusat pemerintahan kecamatan berada di Bekonang. Kecamatan ini berperan sebagai simpul pelayanan publik dan pembinaan pemerintahan desa.</p>
+                </div>
+
+                <div class="profile-card">
+                    <h4>Pelayanan Terpadu (PATEN)</h4>
+                    <p>Mendukung Pelayanan Administrasi Terpadu Kecamatan (PATEN) dalam urusan perizinan, rekomendasi, legalisasi, dan fasilitasi administrasi kependudukan masyarakat secara cepat dan transparan.</p>
+                </div>
+
+                <div class="profile-card">
+                    <h4>Batas Wilayah</h4>
+                    <ul>
+                        <li>Utara: Kabupaten Karanganyar</li>
+                        <li>Selatan: Kecamatan Polokarto</li>
+                        <li>Barat: Kota Surakarta & Bengawan Solo</li>
+                        <li>Timur: Kabupaten Karanganyar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Berita & Kegiatan Kecamatan -->
+    <section id="berita" class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Informasi Terkini</span>
+                <h2 class="section-title">Berita & Kegiatan Kecamatan</h2>
+                <p class="section-desc">Dokumentasi kegiatan pemerintahan dan pelayanan publik di wilayah Kecamatan Mojolaban.</p>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="assets/berita-mojolaban-1.jpg" alt="Penyaluran Cadangan Pangan Mojolaban" class="news-img" onerror="this.style.display='none'">
+                    <div class="news-body">
+                        <div class="news-meta">Pemerintahan & Sosial - Kabupaten Sukoharjo</div>
+                        <h3 class="news-title">Penyaluran Cadangan Pangan Pemerintah Daerah (CPPD) Kabupaten Sukoharjo</h3>
+                        <p class="news-desc">Pemerintah Kabupaten Sukoharjo melalui Kecamatan Mojolaban menyalurkan bantuan cadangan pangan bagi masyarakat penerima manfaat guna menjaga ketahanan pangan keluarga.</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="assets/berita-mojolaban-2.jpg" alt="Upacara Kesaktian Pancasila Mojolaban" class="news-img" onerror="this.style.display='none'">
+                    <div class="news-body">
+                        <div class="news-meta">Kegiatan Daerah - Forkopimcam Mojolaban</div>
+                        <h3 class="news-title">Upacara Peringatan Hari Kesaktian Pancasila Tingkat Kecamatan Mojolaban</h3>
+                        <p class="news-desc">Peringatan Hari Kesaktian Pancasila diselenggarakan secara khidmat bersama jajaran Forkopimcam, kepala desa se-Kecamatan Mojolaban, dan tokoh masyarakat.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Kecamatan Mojolaban</h4>
+                    <p>Situs portal resmi Kecamatan Mojolaban sebagai gerbang penghubung website desa di bawah naungan Pemerintah Kabupaten Sukoharjo.</p>
+                    <p><strong>Alamat:</strong> Jl. Veteran Perang Kemerdekaan No. 4 Bekonang, Mojolaban, Sukoharjo, Jawa Tengah 57554</p>
+                    <p><strong>Telp/Fax:</strong> (0271) 611767</p>
+                    <p><strong>Email:</strong> kecamatanmojolaban@gmail.com</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Jaringan Desa</h4>
+                    <ul>
+                        <li><a href="desa/palur/index.html">Desa Palur</a></li>
+                        <li><a href="desa/plumbon/index.html">Desa Plumbon</a></li>
+                        <li><a href="desa/gadingan/index.html">Desa Gadingan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Jam Pelayanan Kantor</h4>
+                    <p>Senin - Kamis : 07.00 - 15.30 WIB</p>
+                    <p>Jumat : 07.00 - 14.00 WIB</p>
+                    <p>Sabtu - Minggu : Libur</p>
+                    <p style="margin-top:15px"><a href="https://portal.sukoharjokab.go.id/" target="_blank" rel="noopener">Portal Pemkab Sukoharjo</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Hak Cipta 2026 Pemerintah Kecamatan Mojolaban, Kabupaten Sukoharjo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script smooth scroll sederhana -->
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

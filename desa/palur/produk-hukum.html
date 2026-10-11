@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produk Hukum - Desa PALUR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div><span>Palur, Kec. Mojolaban, Kab. Sukoharjo</span></div>
+    <div><span id="tgl">Tanggal: </span><span id="jam">Pukul: </span></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="logo"><img src="images/logo.png" alt="Logo Desa Palur" loading="lazy" onerror="this.remove()"></div>
+      <div>Desa <b>PALUR</b><br>Kabupaten Sukoharjo</div>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-sub"><a href="#">Profil Desa</a>
+        <div class="sub"><a href="sejarah-desa.html">Sejarah Desa</a><a href="visi-misi.html">Visi &amp; Misi</a><a href="perangkat-desa.html">Perangkat Desa</a></div></li>
+      <li class="has-sub"><a href="index.html#layanan">Layanan</a>
+        <div class="sub"><a href="pembuatan-ktp.html">Pembuatan KTP</a><a href="pembuatan-kk.html">Pembuatan KK</a><a href="pembuatan-akte.html">Pembuatan Akte Kelahiran</a></div></li>
+      <li class="has-sub"><a href="#">Lembaga</a>
+        <div class="sub"><a href="bpd.html">BPD</a><a href="lpmd.html">LPMD</a><a href="rt-rw.html">RT/RW</a><a href="pkk.html">PKK</a><a href="karang-taruna.html">Karang Taruna</a></div></li>
+      <li class="has-sub"><a href="#">Data Desa</a>
+        <div class="sub"><a href="potensi-desa.html">Potensi Desa</a><a href="data-pendidikan.html">Data Pendidikan</a><a href="data-kesehatan.html">Data Kesehatan</a><a href="data-kependudukan.html">Data Kependudukan</a><a href="data-keuangan.html">Data Keuangan</a><a href="data-ekonomi.html">Data Ekonomi</a><a href="data-sosial-budaya.html">Data Sosial Budaya</a><a href="data-lainnya.html">Data Lainnya</a></div></li>
+      <li class="has-sub"><a href="#">Informasi</a>
+        <div class="sub"><a href="info-apbdes.html">Info APBDes</a><a href="info-berita.html">Info Berita</a><a href="info-dokumen-apbdes.html">Informasi Dokumen APBDes</a></div></li>
+      <li><a href="produk-hukum.html">Produk Hukum</a></li>
+      <li><a href="stunting.html">Stunting</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="pengaduan.html">Aduan Masyarakat</a></li>
+      <li class="has-sub"><a href="#">PPID</a>
+        <div class="sub"><a href="informasi-berkala.html">Informasi Berkala</a><a href="informasi-serta-merta.html">Informasi Serta Merta</a><a href="informasi-setiap-saat.html">Informasi Setiap Saat</a><a href="informasi-dikecualikan.html">Informasi Dikecualikan</a><a href="permohonan-informasi-publik.html">Permohonan Informasi Publik</a><a href="permohonan-keberatan.html">Permohonan Keberatan</a><a href="penyelesaian-sengketa.html">Penyelesaian Sengketa</a><a href="maklumat-layanan-informasi-publik.html">Maklumat Layanan Informasi Publik</a></div></li>
+      <li class="has-sub"><a href="#">Desa Anti Korupsi</a>
+        <div class="sub wide"><a href="penguatan-tata-laksana.html">I. Penguatan Tata Laksana</a><a href="penguatan-pengawasan.html">II. Penguatan Pengawasan</a><a href="penguatan-kualitas-pelayanan-publik.html">III. Penguatan Kualitas Pelayanan Publik</a><a href="penguatan-partisipasi-masyarakat.html">IV. Penguatan Partisipasi Masyarakat</a><a href="kearifan-lokal.html">V. Kearifan Lokal</a></div></li>
+    </ul>
+  </div>
+</header>
+
+<!-- BANNER HALAMAN -->
+<!-- GANTI: images/banner-visi.jpg (banner ini dipakai bersama oleh semua halaman Profil Desa) -->
+<div class="page-banner">
+  <div>
+    <h1>PRODUK HUKUM</h1>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Beranda</a><span>›</span><b>Produk Hukum</b>
+    </nav>
+  </div>
+</div>
+
+<!-- KONTEN -->
+<main class="page-wrap container">
+  <div>
+    <h2 class="page-title pr-title">PRODUK HUKUM</h2>
+
+    <div class="pr-filters">
+      <select id="pr-th" aria-label="Tahun"><option value="">Semua Tahun</option></select>
+      <select id="pr-jn" aria-label="Jenis dokumen"><option value="">Semua Jenis Dokumen</option></select>
+      <select id="pr-tp" aria-label="Topik / bidang"><option value="">Semua Topik/Bidang</option></select>
+      <span class="pr-sync">Sync: 24 September 2026 08:45</span>
+    </div>
+
+    <div class="pr-bar">
+      <label>Show <select id="pr-len"><option>10</option><option>25</option><option>50</option><option>100</option></select> entries</label>
+      <label>Search: <input type="search" id="pr-q" autocomplete="off"></label>
+    </div>
+
+    <div class="pd-scroll"><table class="pr-table">
+      <thead><tr><th class="no">No</th><th>Judul Produk Hukum</th><th class="c">Nomor</th><th class="c">Jenis</th><th class="c">Tahun</th><th class="c">Aksi</th></tr></thead>
+      <tbody id="pr-body"></tbody>
+    </table></div>
+
+    <div class="pr-foot">
+      <span id="pr-info">Showing 0 to 0 of 0 entries</span>
+      <div class="pr-pg" id="pr-pg"></div>
+    </div>
+  </div>
+
+  <aside>
+    <h2 class="page-title">PENGUMUMAN</h2>
+    <!-- GANTI FOTO: images/pengumuman-1.jpg s/d pengumuman-3.jpg -->
+    <a href="index.html#pengumuman" class="side-item">
+      <div class="thumb ph"><img src="images/pengumuman-1.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div><b>Ruang pelayanan Informasi Kantor Desa Palur</b><small>Pukul: 01 Oktober 2025 · Kategori: Sosial</small></div>
+    </a>
+    <a href="index.html#pengumuman" class="side-item">
+      <div class="thumb ph"><img src="images/pengumuman-2.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div><b>Informasi Pengadaan Barang dan Jasa</b><small>Pukul: 01 Oktober 2025 · Kategori: Sosial</small></div>
+    </a>
+    <a href="index.html#pengumuman" class="side-item">
+      <div class="thumb ph"><img src="images/pengumuman-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div><b>INFORMASI PELAYANAN DESA</b><small>Pukul: 09 Januari 2025 · Kategori: Sosial</small></div>
+    </a>
+  </aside>
+</main>
+
+<script>
+// tabel produk hukum: filter, cari, jumlah baris, halaman
+(function(){
+  // ISI PRODUK HUKUM DI SINI (file = tautan unduh, lihat = tautan lihat, detail = halaman detail)
+  var docs=[
+    {judul:'Peraturan Desa Palur Nomor 6 Tahun 2021 Tentang Anggaran Pendapatan Dan Belanja Desa Tahun Anggaran 2022',nomor:'No. 6',jenis:'Peraturan Desa',tahun:2021,topik:'',file:'#',lihat:'#',detail:'#'}
+  ];
+  var body=document.getElementById('pr-body'),info=document.getElementById('pr-info'),pg=document.getElementById('pr-pg'),
+      th=document.getElementById('pr-th'),jn=document.getElementById('pr-jn'),tp=document.getElementById('pr-tp'),
+      q=document.getElementById('pr-q'),len=document.getElementById('pr-len'),page=0;
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function opts(sel,key,desc){
+    var v=[];docs.forEach(function(d){if(d[key]&&v.indexOf(d[key])<0)v.push(d[key])});
+    v.sort();if(desc)v.reverse();
+    v.forEach(function(x){var o=document.createElement('option');o.value=x;o.textContent=x;sel.appendChild(o)});
+  }
+  opts(th,'tahun',true);opts(jn,'jenis');opts(tp,'topik');
+  function render(){
+    var k=q.value.trim().toLowerCase(),n=+len.value;
+    var rows=docs.filter(function(d){
+      return (!th.value||String(d.tahun)===th.value)&&(!jn.value||d.jenis===jn.value)&&(!tp.value||d.topik===tp.value)&&
+        (!k||(d.judul+' '+d.nomor+' '+d.jenis+' '+d.tahun).toLowerCase().indexOf(k)>-1);
+    });
+    var pages=Math.max(1,Math.ceil(rows.length/n));if(page>=pages)page=pages-1;
+    var from=page*n,part=rows.slice(from,from+n);
+    body.innerHTML=part.length?part.map(function(d,i){
+      return '<tr><td class="no">'+(from+i+1)+'.</td><td class="jd">'+esc(d.judul)+'</td><td class="c">'+esc(d.nomor)+'</td><td class="c">'+esc(d.jenis)+'</td><td class="c">'+esc(d.tahun)+'</td>'+
+        '<td class="ak"><a class="pr-b b1" href="'+esc(d.file)+'" download>UNDUH Unduh</a><a class="pr-b b2" href="'+esc(d.lihat)+'" target="_blank" rel="noopener">LIHAT ◉</a><a class="pr-b b3" href="'+esc(d.detail)+'">DETAIL ⓘ</a></td></tr>';
+    }).join(''):'<tr class="empty"><td colspan="6">No data available</td></tr>';
+    info.textContent='Showing '+(part.length?from+1:0)+' to '+(from+part.length)+' of '+rows.length+' entries';
+    var h='<button type="button" data-p="'+(page-1)+'"'+(page<=0?' disabled':'')+'>Previous</button>';
+    for(var i=0;i<pages;i++)h+='<button type="button" data-p="'+i+'"'+(i===page?' class="on"':'')+'>'+(i+1)+'</button>';
+    h+='<button type="button" data-p="'+(page+1)+'"'+(page>=pages-1?' disabled':'')+'>Next</button>';
+    pg.innerHTML=h;
+  }
+  pg.addEventListener('click',function(e){var b=e.target.closest('button');if(b&&!b.disabled){page=+b.dataset.p;render()}});
+  [th,jn,tp,len].forEach(function(el){el.addEventListener('change',function(){page=0;render()})});
+  q.addEventListener('input',function(){page=0;render()});
+  render();
+})();
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fhead"><span>PEMERINTAH DESA PALUR</span><span>PEMERINTAH KABUPATEN SUKOHARJO</span></div>
+    <div class="fgrid">
+      <div>
+        <h4>Desa Palur</h4>
+        <div class="addr">CVFF+3JG, Sawah, Palur, Kec. Mojolaban, Kabupaten Sukoharjo, Jawa Tengah 57554</div>
+      </div>
+      <div><h4>Link Terkait</h4><ul><li><a href="index.html#layanan">Layanan</a></li><li><a href="#">PPID</a></li><li><a href="#">Pemkab Sukoharjo</a></li></ul></div>
+      <div><h4>Jadwal Pelayanan</h4><ul class="plain"><li>Senin s/d Kamis : 08.00 – 15.00 WIB</li><li>Jumat : 08.00 – 14.00 WIB</li><li>Sabtu : Libur</li></ul></div>
+      <div><h4>Aplikasi Desa</h4><ul><li><a href="#">Perpustakaan Desa</a></li><li><a href="#">Absen Perangkat Desa</a></li><li><a href="#">Cepat Tanggap</a></li></ul></div>
+      <div><h4>Unduhan</h4><ul><li><a href="#">Formulir Pengajuan KTP</a></li><li><a href="#">Formulir Pembuatan AKTE</a></li><li><a href="#">Formulir Pembuatan KK</a></li></ul></div>
+    </div>
+    <div class="pills">
+      <span>Pengunjung hari ini: <b>3 Orang</b></span>
+      <span>Total Pengunjung: <b>13986 Orang</b></span>
+      <span>Total pengunjung online: <b>1 Orang</b></span>
+    </div>
+  </div>
+  <div class="fbottom"><div class="container" style="justify-content:center"><span>Hak Cipta © 2026 Desa Palur | Kabupaten Sukoharjo</span></div></div>
+</footer>
+
+<a href="#" class="totop" aria-label="Kembali ke atas">↑</a>
+
+<script src="script.js"></script>
+</body>
+</html>

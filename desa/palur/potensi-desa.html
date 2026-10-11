@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potensi Desa - Desa PALUR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div><span>Palur, Kec. Mojolaban, Kab. Sukoharjo</span></div>
+    <div><span id="tgl">Tanggal: </span><span id="jam">Pukul: </span></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="logo"><img src="images/logo.png" alt="Logo Desa Palur" loading="lazy" onerror="this.remove()"></div>
+      <div>Desa <b>PALUR</b><br>Kabupaten Sukoharjo</div>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-sub"><a href="#">Profil Desa</a>
+        <div class="sub"><a href="sejarah-desa.html">Sejarah Desa</a><a href="visi-misi.html">Visi &amp; Misi</a><a href="perangkat-desa.html">Perangkat Desa</a></div></li>
+      <li class="has-sub"><a href="index.html#layanan">Layanan</a>
+        <div class="sub"><a href="pembuatan-ktp.html">Pembuatan KTP</a><a href="pembuatan-kk.html">Pembuatan KK</a><a href="pembuatan-akte.html">Pembuatan Akte Kelahiran</a></div></li>
+      <li class="has-sub"><a href="#">Lembaga</a>
+        <div class="sub"><a href="bpd.html">BPD</a><a href="lpmd.html">LPMD</a><a href="rt-rw.html">RT/RW</a><a href="pkk.html">PKK</a><a href="karang-taruna.html">Karang Taruna</a></div></li>
+      <li class="has-sub"><a href="#">Data Desa</a>
+        <div class="sub"><a href="potensi-desa.html">Potensi Desa</a><a href="data-pendidikan.html">Data Pendidikan</a><a href="data-kesehatan.html">Data Kesehatan</a><a href="data-kependudukan.html">Data Kependudukan</a><a href="data-keuangan.html">Data Keuangan</a><a href="data-ekonomi.html">Data Ekonomi</a><a href="data-sosial-budaya.html">Data Sosial Budaya</a><a href="data-lainnya.html">Data Lainnya</a></div></li>
+      <li class="has-sub"><a href="#">Informasi</a>
+        <div class="sub"><a href="info-apbdes.html">Info APBDes</a><a href="info-berita.html">Info Berita</a><a href="info-dokumen-apbdes.html">Informasi Dokumen APBDes</a></div></li>
+      <li><a href="produk-hukum.html">Produk Hukum</a></li>
+      <li><a href="stunting.html">Stunting</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="pengaduan.html">Aduan Masyarakat</a></li>
+      <li class="has-sub"><a href="#">PPID</a>
+        <div class="sub"><a href="informasi-berkala.html">Informasi Berkala</a><a href="informasi-serta-merta.html">Informasi Serta Merta</a><a href="informasi-setiap-saat.html">Informasi Setiap Saat</a><a href="informasi-dikecualikan.html">Informasi Dikecualikan</a><a href="permohonan-informasi-publik.html">Permohonan Informasi Publik</a><a href="permohonan-keberatan.html">Permohonan Keberatan</a><a href="penyelesaian-sengketa.html">Penyelesaian Sengketa</a><a href="maklumat-layanan-informasi-publik.html">Maklumat Layanan Informasi Publik</a></div></li>
+      <li class="has-sub"><a href="#">Desa Anti Korupsi</a>
+        <div class="sub wide"><a href="penguatan-tata-laksana.html">I. Penguatan Tata Laksana</a><a href="penguatan-pengawasan.html">II. Penguatan Pengawasan</a><a href="penguatan-kualitas-pelayanan-publik.html">III. Penguatan Kualitas Pelayanan Publik</a><a href="penguatan-partisipasi-masyarakat.html">IV. Penguatan Partisipasi Masyarakat</a><a href="kearifan-lokal.html">V. Kearifan Lokal</a></div></li>
+    </ul>
+  </div>
+</header>
+
+<!-- BANNER HALAMAN -->
+<!-- GANTI: images/banner-visi.jpg (banner ini dipakai bersama oleh semua halaman dalam) -->
+<div class="page-banner">
+  <div>
+    <h1>POTENSI SUMBER DAYA ALAM &amp; WILAYAH</h1>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Beranda</a><span>›</span><a href="index.html#datadesa">Data Desa</a><span>›</span><b>Potensi Sumber Daya Alam</b>
+    </nav>
+  </div>
+</div>
+
+<!-- KONTEN -->
+<main class="pd-wrap container">
+  <nav class="pd-side" id="pd-side" aria-label="Kategori potensi desa">
+      <a href="#area-wisata" data-tab="area-wisata" class="on">Area Wisata</a>
+      <a href="#komoditas-pertanian" data-tab="komoditas-pertanian">Komoditas Pertanian</a>
+      <a href="#jenis-populasi-ternak" data-tab="jenis-populasi-ternak">Jenis Populasi Ternak</a>
+      <a href="#hasil-produksi-ternak" data-tab="hasil-produksi-ternak">Hasil Produksi Ternak</a>
+      <a href="#alat-budidaya-ikan" data-tab="alat-budidaya-ikan">Alat Budidaya Ikan</a>
+      <a href="#bahan-galian" data-tab="bahan-galian">Bahan Galian</a>
+      <a href="#perindustrian" data-tab="perindustrian">Perindustrian</a>
+      <a href="#sumber-daya-air" data-tab="sumber-daya-air">Sumber Daya Air</a>
+      <a href="#luas-wilayah-sawah" data-tab="luas-wilayah-sawah">Luas Wilayah Sawah</a>
+      <a href="#luas-wilayah-kering" data-tab="luas-wilayah-kering">Luas Wilayah Kering</a>
+      <a href="#luas-wilayah-basah" data-tab="luas-wilayah-basah">Luas Wilayah Basah</a>
+      <a href="#luas-wilayah-kebun" data-tab="luas-wilayah-kebun">Luas Wilayah Kebun</a>
+      <a href="#luas-fasilitas-umum" data-tab="luas-fasilitas-umum">Luas Fasilitas Umum</a>
+      <a href="#luas-wilayah-hutan" data-tab="luas-wilayah-hutan">Luas Wilayah Hutan</a>
+  </nav>
+
+  <div class="pd-main">
+    <div class="pd-filter">
+      <div><b>Tahun Pelaporan:</b> <select class="pd-year" id="pd-year" aria-label="Tahun pelaporan"><option value="2026">Tahun 2026</option><option value="2024" selected>Tahun 2024</option><option value="2023">Tahun 2023</option><option value="2022">Tahun 2022</option></select></div>
+      <span class="pd-badge"> Pidekso Terintegrasi</span>
+    </div>
+    <section class="pd-panel" id="area-wisata">
+      <h3 class="pd-title">Data Area Wisata (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Lokasi Objek Wisata</th><th class="c">Luas (Ha)</th><th class="c">Pemanfaatan</th><th class="c">Koordinat</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="5">Belum ada data area wisata untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="komoditas-pertanian" hidden>
+      <h3 class="pd-title">Data Komoditas Pertanian &amp; Perkebunan (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Nama Komoditas</th><th class="c">Luas Lahan (Ha)</th><th class="c">Perkiraan Hasil Produksi (Ton)</th></tr></thead>
+        <tbody><tr><td class="no">1</td><td>Padi</td><td class="c">101.13</td><td class="c">6.00</td></tr><tr><td class="no">2</td><td>Bawang Merah</td><td class="c">0.00</td><td class="c">1.50</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="jenis-populasi-ternak" hidden>
+      <h3 class="pd-title">Data Populasi Ternak (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Jenis Ternak</th><th class="c">Jumlah Populasi (Ekor)</th><th class="c">Perkiraan Pemilik</th></tr></thead>
+        <tbody><tr><td class="no">1</td><td>Sapi</td><td class="c">-</td><td class="c">-</td></tr><tr><td class="no">2</td><td>Bebek</td><td class="c">-</td><td class="c">-</td></tr><tr><td class="no">3</td><td>Kambing</td><td class="c">-</td><td class="c">-</td></tr><tr><td class="no">4</td><td>Lele</td><td class="c">-</td><td class="c">-</td></tr><tr><td class="no">5</td><td>Jenis ayam broiler</td><td class="c">-</td><td class="c">-</td></tr><tr><td class="no">6</td><td>Ayam kampung</td><td class="c">-</td><td class="c">-</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="hasil-produksi-ternak" hidden>
+      <h3 class="pd-title">Data Hasil Produksi Peternakan (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Jenis Hasil Ternak</th><th class="c">Hasil Produksi</th></tr></thead>
+        <tbody><tr><td class="no">1</td><td>Susu</td><td class="c">4000.00</td></tr><tr><td class="no">2</td><td>Telur</td><td class="c">1700.00</td></tr><tr><td class="no">3</td><td>Kulit</td><td class="c">100.00</td></tr><tr><td class="no">4</td><td>Daging</td><td class="c">2500.00</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="alat-budidaya-ikan" hidden>
+      <h3 class="pd-title">Data Alat &amp; Sarana Budidaya Perikanan (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Jenis Sarana / Alat Budidaya</th><th class="c">Jumlah Unit</th><th class="c">Perkiraan Produksi</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data sarana budidaya perikanan untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="bahan-galian" hidden>
+      <h3 class="pd-title">Data Bahan Galian (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data bahan galian untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="perindustrian" hidden>
+      <h3 class="pd-title">Data Perindustrian (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data perindustrian untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="sumber-daya-air" hidden>
+      <h3 class="pd-title">Data Sumber Daya Air (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data sumber daya air untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="luas-wilayah-sawah" hidden>
+      <h3 class="pd-title">Data Luas Wilayah Sawah (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data luas wilayah sawah untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="luas-wilayah-kering" hidden>
+      <h3 class="pd-title">Data Luas Wilayah Kering (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data luas wilayah kering untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="luas-wilayah-basah" hidden>
+      <h3 class="pd-title">Data Luas Wilayah Basah (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data luas wilayah basah untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="luas-wilayah-kebun" hidden>
+      <h3 class="pd-title">Data Luas Wilayah Kebun (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data luas wilayah kebun untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="luas-fasilitas-umum" hidden>
+      <h3 class="pd-title">Data Luas Fasilitas Umum (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data luas fasilitas umum untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+    <section class="pd-panel" id="luas-wilayah-hutan" hidden>
+      <h3 class="pd-title">Data Luas Wilayah Hutan (Tahun 2024)</h3>
+      <div class="pd-scroll"><table class="pd-table">
+        <thead><tr><th class="no">No</th><th>Uraian</th><th class="c">Jumlah</th><th class="c">Keterangan</th></tr></thead>
+        <tbody><tr class="empty"><td colspan="4">Belum ada data luas wilayah hutan untuk tahun 2024.</td></tr></tbody>
+      </table></div>
+    </section>
+  </div>
+</main>
+
+<script>
+// ganti kategori di sidebar tanpa pindah halaman
+(function(){
+  var links=document.querySelectorAll('#pd-side a'),panels=document.querySelectorAll('.pd-panel');
+  function show(id){
+    var ok=false;panels.forEach(function(p){if(p.id===id)ok=true});
+    if(!ok)id=panels[0].id;
+    panels.forEach(function(p){p.hidden=p.id!==id});
+    links.forEach(function(a){a.classList.toggle('on',a.dataset.tab===id)});
+  }
+  links.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.dataset.tab);history.replaceState(null,'','#'+a.dataset.tab)})});
+  show(location.hash.slice(1));
+
+  // pilih tahun pelaporan: 2024 = data yang ada, tahun lain = kosong
+  var DATA_YEAR='2024',ySel=document.getElementById('pd-year'),orig=[];
+  panels.forEach(function(p){var tb=p.querySelector('tbody'),h=p.querySelector('.pd-title');orig.push({tb:tb,body:tb.innerHTML,h:h,title:h.textContent})});
+  function setYear(y){
+    panels.forEach(function(p,i){
+      var o=orig[i],cols=p.querySelectorAll('thead th').length,name=document.querySelector('#pd-side a[data-tab="'+p.id+'"]').textContent.toLowerCase();
+      o.h.textContent=o.title.replace(/Tahun \d{4}/,'Tahun '+y);
+      o.tb.innerHTML=y===DATA_YEAR?o.body:'<tr class="empty"><td colspan="'+cols+'">Belum ada data '+name+' untuk tahun '+y+'.</td></tr>';
+    });
+  }
+  ySel.addEventListener('change',function(){setYear(ySel.value)});
+})();
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fhead"><span>PEMERINTAH DESA PALUR</span><span>PEMERINTAH KABUPATEN SUKOHARJO</span></div>
+    <div class="fgrid">
+      <div>
+        <h4>Desa Palur</h4>
+        <div class="addr">CVFF+3JG, Sawah, Palur, Kec. Mojolaban, Kabupaten Sukoharjo, Jawa Tengah 57554</div>
+      </div>
+      <div><h4>Link Terkait</h4><ul><li><a href="index.html#layanan">Layanan</a></li><li><a href="#">PPID</a></li><li><a href="#">Pemkab Sukoharjo</a></li></ul></div>
+      <div><h4>Jadwal Pelayanan</h4><ul class="plain"><li>Senin s/d Kamis : 08.00 – 15.00 WIB</li><li>Jumat : 08.00 – 14.00 WIB</li><li>Sabtu : Libur</li></ul></div>
+      <div><h4>Aplikasi Desa</h4><ul><li><a href="#">Perpustakaan Desa</a></li><li><a href="#">Absen Perangkat Desa</a></li><li><a href="#">Cepat Tanggap</a></li></ul></div>
+      <div><h4>Unduhan</h4><ul><li><a href="#">Formulir Pengajuan KTP</a></li><li><a href="#">Formulir Pembuatan AKTE</a></li><li><a href="#">Formulir Pembuatan KK</a></li></ul></div>
+    </div>
+    <div class="pills">
+      <span>Pengunjung hari ini: <b>3 Orang</b></span>
+      <span>Total Pengunjung: <b>13987 Orang</b></span>
+      <span>Total pengunjung online: <b>1 Orang</b></span>
+    </div>
+  </div>
+  <div class="fbottom"><div class="container" style="justify-content:center"><span>Hak Cipta © 2026 Desa Palur | Kabupaten Sukoharjo</span></div></div>
+</footer>
+
+<a href="#" class="totop" aria-label="Kembali ke atas">↑</a>
+
+<script src="script.js"></script>
+</body>
+</html>

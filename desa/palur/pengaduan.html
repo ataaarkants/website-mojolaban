@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pengaduan Masyarakat - Desa PALUR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div><span>Palur, Kec. Mojolaban, Kab. Sukoharjo</span></div>
+    <div><span id="tgl">Tanggal: </span><span id="jam">Pukul: </span></div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <div class="logo"><img src="images/logo.png" alt="Logo Desa Palur" loading="lazy" onerror="this.remove()"></div>
+      <div>Desa <b>PALUR</b><br>Kabupaten Sukoharjo</div>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-sub"><a href="#">Profil Desa</a>
+        <div class="sub"><a href="sejarah-desa.html">Sejarah Desa</a><a href="visi-misi.html">Visi &amp; Misi</a><a href="perangkat-desa.html">Perangkat Desa</a></div></li>
+      <li class="has-sub"><a href="index.html#layanan">Layanan</a>
+        <div class="sub"><a href="pembuatan-ktp.html">Pembuatan KTP</a><a href="pembuatan-kk.html">Pembuatan KK</a><a href="pembuatan-akte.html">Pembuatan Akte Kelahiran</a></div></li>
+      <li class="has-sub"><a href="#">Lembaga</a>
+        <div class="sub"><a href="bpd.html">BPD</a><a href="lpmd.html">LPMD</a><a href="rt-rw.html">RT/RW</a><a href="pkk.html">PKK</a><a href="karang-taruna.html">Karang Taruna</a></div></li>
+      <li class="has-sub"><a href="#">Data Desa</a>
+        <div class="sub"><a href="potensi-desa.html">Potensi Desa</a><a href="data-pendidikan.html">Data Pendidikan</a><a href="data-kesehatan.html">Data Kesehatan</a><a href="data-kependudukan.html">Data Kependudukan</a><a href="data-keuangan.html">Data Keuangan</a><a href="data-ekonomi.html">Data Ekonomi</a><a href="data-sosial-budaya.html">Data Sosial Budaya</a><a href="data-lainnya.html">Data Lainnya</a></div></li>
+      <li class="has-sub"><a href="#">Informasi</a>
+        <div class="sub"><a href="info-apbdes.html">Info APBDes</a><a href="info-berita.html">Info Berita</a><a href="info-dokumen-apbdes.html">Informasi Dokumen APBDes</a></div></li>
+      <li><a href="produk-hukum.html">Produk Hukum</a></li>
+      <li><a href="stunting.html">Stunting</a></li>
+      <li><a href="galeri.html">Galeri</a></li>
+      <li><a href="pengaduan.html">Aduan Masyarakat</a></li>
+      <li class="has-sub"><a href="#">PPID</a>
+        <div class="sub"><a href="informasi-berkala.html">Informasi Berkala</a><a href="informasi-serta-merta.html">Informasi Serta Merta</a><a href="informasi-setiap-saat.html">Informasi Setiap Saat</a><a href="informasi-dikecualikan.html">Informasi Dikecualikan</a><a href="permohonan-informasi-publik.html">Permohonan Informasi Publik</a><a href="permohonan-keberatan.html">Permohonan Keberatan</a><a href="penyelesaian-sengketa.html">Penyelesaian Sengketa</a><a href="maklumat-layanan-informasi-publik.html">Maklumat Layanan Informasi Publik</a></div></li>
+      <li class="has-sub"><a href="#">Desa Anti Korupsi</a>
+        <div class="sub wide"><a href="penguatan-tata-laksana.html">I. Penguatan Tata Laksana</a><a href="penguatan-pengawasan.html">II. Penguatan Pengawasan</a><a href="penguatan-kualitas-pelayanan-publik.html">III. Penguatan Kualitas Pelayanan Publik</a><a href="penguatan-partisipasi-masyarakat.html">IV. Penguatan Partisipasi Masyarakat</a><a href="kearifan-lokal.html">V. Kearifan Lokal</a></div></li>
+    </ul>
+  </div>
+</header>
+
+<!-- BANNER HALAMAN -->
+<!-- GANTI: images/banner-visi.jpg (banner ini dipakai bersama oleh semua halaman Profil Desa) -->
+<div class="page-banner">
+  <div>
+    <h1>PENGADUAN MASYARAKAT</h1>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Beranda</a><span>›</span><b>Aduan Masyarakat</b>
+    </nav>
+  </div>
+</div>
+
+<!-- KONTEN -->
+<main class="page-wrap container">
+  <div>
+    <h2 class="page-title ad-title"><svg class="ad-ic" viewBox="0 0 16 16" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M13.500 1.500v10L9 9.200H5.500L6.700 14H4.800L3.500 9.200H3a1.500 1.500 0 0 1-1.500-1.500v-1A1.500 1.500 0 0 1 3 5.200h6zM15 4.500v4h-.8v-4z"/></svg>PENGADUAN MASYARAKAT</h2>
+
+    <div class="dk-card">
+      <div class="dk-card-head ad-top">
+        <div class="ad-chips" id="ad-chips">
+          <button type="button" class="on" data-s="all">SEMUA ADUAN (<span id="c-all">0</span>)</button>
+          <button type="button" data-s="proses">⟳ SEDANG DIPROSES (<span id="c-proses">0</span>)</button>
+          <button type="button" data-s="selesai"> SELESAI (<span id="c-selesai">0</span>)</button>
+        </div>
+        <button type="button" class="ad-new" id="ad-open">⊕ BUAT PENGADUAN</button>
+      </div>
+
+      <div class="dk-bar">
+        <label>Tampilkan: <select id="ad-len"><option>10</option><option selected>25</option><option>50</option><option>100</option></select></label>
+        <label>Pencarian: <input type="search" id="ad-q" placeholder="Ketik nama / kata kunc" autocomplete="off"></label>
+      </div>
+
+      <div class="pd-scroll"><table class="dk-table ad-table" id="ad-table">
+        <thead><tr>
+          <th class="no">No.</th>
+          <th class="srt" data-k="nama">Nama Pelapor</th>
+          <th class="srt" data-k="tanggal">Tanggal</th>
+          <th class="srt" data-k="judul">Judul Pengaduan</th>
+          <th class="srt" data-k="status">Status</th>
+          <th class="aksi">Aksi</th>
+        </tr></thead>
+        <tbody id="ad-body"></tbody>
+      </table></div>
+
+      <div class="dk-foot">
+        <span id="ad-info">Menampilkan 0 sampai 0 entri</span>
+        <div class="dk-pg"><button type="button" id="ad-prev">‹</button><button type="button" id="ad-next">›</button></div>
+      </div>
+    </div>
+  </div>
+
+  <aside>
+    <h2 class="page-title"><svg class="dk-ic dk-ic-s" viewBox="0 0 16 16" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M1.500 3h13v10h-13zM3 4.500v7h10v-7zM4 5.500h3.500v2.500H4zM8.500 5.500H12V6.500H8.500zM8.500 7.500H12v1H8.500zM4 9h8v1H4z" fill-rule="evenodd"/></svg>BERITA TERKINI</h2>
+    <a href="info-berita.html" class="side-item">
+      <div class="thumb ph"><img src="images/berita-1.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div><b>Tata Cara Permohonan Informasi Publik</b><small>Pukul: 16 September 2025</small></div>
+    </a>
+    <a href="info-berita.html" class="side-item">
+      <div class="thumb ph"><img src="images/berita-2.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      <div><b>Digitalisasi Toko Kelontong Desa Palur Resmi Ditutup dengan Capaian Positif</b><small>Pukul: 17 Desember 2024</small></div>
+    </a>
+  </aside>
+</main>
+
+<!-- FORM BUAT PENGADUAN -->
+<div class="ad-modal" id="ad-modal" hidden>
+  <div class="ad-dialog" role="dialog" aria-modal="true" aria-labelledby="ad-mt">
+    <button type="button" class="ad-x" id="ad-close" aria-label="Tutup"></button>
+    <h3 id="ad-mt">Buat Pengaduan</h3>
+    <form class="form" id="ad-form">
+      <div><label for="f-nama">Nama Pelapor</label><input id="f-nama" name="nama" required></div>
+      <div><label for="f-kontak">No. HP / Email</label><input id="f-kontak" name="kontak" required></div>
+      <div class="full"><label for="f-judul">Judul Pengaduan</label><input id="f-judul" name="judul" required></div>
+      <div class="full"><label for="f-isi">Isi Pengaduan</label><textarea id="f-isi" name="isi" required></textarea></div>
+      <div class="full"><p class="ad-msg" id="ad-msg" hidden></p><button type="submit" class="btn">Kirim Pengaduan</button></div>
+    </form>
+  </div>
+</div>
+
+<script>
+// pengaduan masyarakat: filter status, cari, urutkan, halaman, form
+(function(){
+  // DATA ADUAN (hanya yang sudah terverifikasi). Contoh:
+  // {nama:'Budi',tanggal:'2026-10-01',judul:'Lampu jalan mati',status:'proses'}   // status: 'proses' | 'selesai'
+  var aduan=[];
+  // Isi dengan alamat server penerima aduan (mis. Google Apps Script / API desa). Kosong = belum terhubung.
+  var ENDPOINT='';
+  var bln=['Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember'];
+  var lbl={proses:'Sedang Diproses',selesai:'Selesai'};
+  var $=function(i){return document.getElementById(i)};
+  var body=$('ad-body'),info=$('ad-info'),q=$('ad-q'),len=$('ad-len'),prev=$('ad-prev'),next=$('ad-next'),
+      chips=document.querySelectorAll('#ad-chips button'),ths=document.querySelectorAll('#ad-table th.srt');
+  var page=0,st='all',key=null,dir=1;
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function fmt(d){var p=d.split('-');return p.length===3?(+p[2])+' '+bln[+p[1]-1]+' '+p[0]:d}
+  function count(){
+    $('c-all').textContent=aduan.length;
+    ['proses','selesai'].forEach(function(s){$('c-'+s).textContent=aduan.filter(function(a){return a.status===s}).length});
+  }
+  function render(){
+    var k=q.value.trim().toLowerCase(),n=+len.value;
+    var rows=aduan.filter(function(a){return (st==='all'||a.status===st)&&(!k||(a.nama+' '+a.judul).toLowerCase().indexOf(k)>-1)});
+    if(key)rows.sort(function(a,b){return a[key]<b[key]?-dir:a[key]>b[key]?dir:0});
+    var pages=Math.max(1,Math.ceil(rows.length/n));if(page>=pages)page=pages-1;
+    var from=page*n,part=rows.slice(from,from+n);
+    body.innerHTML=part.length?part.map(function(a,i){
+      return '<tr><td class="no">'+(from+i+1)+'</td><td>'+esc(a.nama)+'</td><td>'+fmt(a.tanggal)+'</td><td>'+esc(a.judul)+'</td><td>'+(lbl[a.status]||esc(a.status))+'</td><td class="aksi"><a class="dk-dl" href="#">Detail</a></td></tr>';
+    }).join(''):'<tr class="empty"><td colspan="6"><div class="ad-empty"><svg viewBox="0 0 16 16" width="40" height="40" fill="currentColor" aria-hidden="true"><path d="M2.500 9 4 3.500h8L13.500 9zM1.500 9.500h4l.7 1.500h3.600l.7-1.500h4V13h-13z"/></svg>Belum ada data pengaduan terverifikasi pada status ini.</div></td></tr>';
+    info.textContent='Menampilkan '+(part.length?from+1:0)+' sampai '+(from+part.length)+' entri';
+    prev.disabled=page<=0;next.disabled=page>=pages-1;
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){st=c.dataset.s;page=0;chips.forEach(function(x){x.classList.toggle('on',x===c)});render()})});
+  ths.forEach(function(th){th.addEventListener('click',function(){
+    var k=th.dataset.k;dir=(key===k)?-dir:1;key=k;page=0;
+    ths.forEach(function(x){x.classList.remove('asc','desc')});th.classList.add(dir>0?'asc':'desc');render();
+  })});
+  q.addEventListener('input',function(){page=0;render()});
+  len.addEventListener('change',function(){page=0;render()});
+  prev.addEventListener('click',function(){page--;render()});
+  next.addEventListener('click',function(){page++;render()});
+
+  // modal
+  var modal=$('ad-modal'),form=$('ad-form'),msg=$('ad-msg');
+  function open(){msg.hidden=true;modal.hidden=false;$('f-nama').focus()}
+  function close(){modal.hidden=true}
+  $('ad-open').addEventListener('click',open);
+  $('ad-close').addEventListener('click',close);
+  modal.addEventListener('click',function(e){if(e.target===modal)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)close()});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();msg.hidden=false;msg.className='ad-msg';
+    if(!ENDPOINT){msg.className='ad-msg err';msg.textContent='Formulir belum terhubung ke server. Silakan sampaikan pengaduan langsung ke Kantor Desa pada jam pelayanan.';return}
+    var data={};new FormData(form).forEach(function(v,k){data[k]=v});data.tanggal=new Date().toISOString().slice(0,10);
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(!r.ok)throw 0;msg.className='ad-msg ok';msg.textContent='Pengaduan terkirim. Terima kasih, pengaduan Anda akan diverifikasi oleh petugas desa.';form.reset()})
+      .catch(function(){msg.className='ad-msg err';msg.textContent='Pengaduan gagal dikirim. Silakan coba lagi.'});
+  });
+  count();render();
+})();
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fhead"><span>PEMERINTAH DESA PALUR</span><span>PEMERINTAH KABUPATEN SUKOHARJO</span></div>
+    <div class="fgrid">
+      <div>
+        <h4>Desa Palur</h4>
+        <div class="addr">CVFF+3JG, Sawah, Palur, Kec. Mojolaban, Kabupaten Sukoharjo, Jawa Tengah 57554</div>
+      </div>
+      <div><h4>Link Terkait</h4><ul><li><a href="index.html#layanan">Layanan</a></li><li><a href="#">PPID</a></li><li><a href="#">Pemkab Sukoharjo</a></li></ul></div>
+      <div><h4>Jadwal Pelayanan</h4><ul class="plain"><li>Senin s/d Kamis : 08.00 – 15.00 WIB</li><li>Jumat : 08.00 – 14.00 WIB</li><li>Sabtu : Libur</li></ul></div>
+      <div><h4>Aplikasi Desa</h4><ul><li><a href="#">Perpustakaan Desa</a></li><li><a href="#">Absen Perangkat Desa</a></li><li><a href="#">Cepat Tanggap</a></li></ul></div>
+      <div><h4>Unduhan</h4><ul><li><a href="#">Formulir Pengajuan KTP</a></li><li><a href="#">Formulir Pembuatan AKTE</a></li><li><a href="#">Formulir Pembuatan KK</a></li></ul></div>
+    </div>
+    <div class="pills">
+      <span>Pengunjung hari ini: <b>3 Orang</b></span>
+      <span>Total Pengunjung: <b>13986 Orang</b></span>
+      <span>Total pengunjung online: <b>1 Orang</b></span>
+    </div>
+  </div>
+  <div class="fbottom"><div class="container" style="justify-content:center"><span>Hak Cipta © 2026 Desa Palur | Kabupaten Sukoharjo</span></div></div>
+</footer>
+
+<a href="#" class="totop" aria-label="Kembali ke atas">↑</a>
+
+<script src="script.js"></script>
+</body>
+</html>
