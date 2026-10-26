@@ -46,3 +46,4 @@ desa/gadingan/uploads/        foto dari website resmi desa
 - Banyak tabel Data Sektoral memang masih kosong di website resmi desa; ditampilkan sebagai daftar "belum diisi".
 - Email, tautan Google Maps, dan foto kantor diambil dari poster "Layanan Informasi Pelayanan Desa" di website desa.
 - Peta memakai Google Maps embed (butuh internet).
+- Pemakaian Python untuk server
